@@ -21,18 +21,14 @@
            <li class="main-menu-item">
             <a href="#">Избранное<sup>12</sup></a></li><!--при оформлении будет сделано значком "сердечко" со "степенью" количества-->
           <li class="main-menu-item">
-            <a href="#">Хочу сюда!</a></li><!--при оформлении будет выглядеть внешне как кнопка-->
+            <button class="want-to-come-here">Хочу сюда!</button></li><!--при оформлении будет выглядеть внешне как кнопка; открывает попап поиска отеля-->
         </ul>
       </nav>
     </header>
     <main>
       <section class="main-banner">
         <h1 class="visually-hidden">Welcome to the Gorgeous Sedona</h1>
-        <ul class="main-banner-images"><!--При оформлении убрать вывод значков элементов списка-->
-          <li class="main-banner-background"><img src="#" alt="Пейзаж коньона Седоны"></li>
-          <li class="main-banner-divider"><img src="#"></li> <!--картинка-разделитель-->
-          <li class="main-banner-text"><img src="#" alt="Because the Grand Canyon sucks!"></li>
-        </ul>
+        <img src="#" alt="Because the Grand Canyon sucks!"><!--картинка с текстом, другие две будут добавлены в ЦСС-->
       </section>
       <section class="Sedona-main-advantages">
         <h2 class="visually-hidden">Преимущества Седоны</h2>
@@ -43,9 +39,8 @@
             <h3 class="Sedona-advantages">Настоящий городок</h3>
             <p class="advantage-number">- №1 -</p>
             <p class="advantage-description">Седона - не аттракцион для туристов, там течёт своя жизнь</p>
+            <img src="#" alt="Город Седона" class="Sedona-advantages-image"></li><!--при оформлении этот блок ли равен двум блокам ли из этого списка без картинки-->
             <ul class="Sedona-additional-advantages-list"><!--При оформлении убрать вывод значков элементов списка-->
-              <li class="Sedona-advantages-image">
-                <img src="#" alt="Город Седона"></li><!--при оформлении этот блок ли равен двум блокам ли из этого списка без картинки-->
               <li class="gray-background black-text">
                 <h4 class="Sedona-additional-advantage">Жильё</h4><!--При оформлении перед будет добавлена декоративная картинка-->
                 <p class="advantage-description">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p></li>
@@ -57,9 +52,8 @@
                 <p class="advantage-description">Не только китайского, но и настоящего местного производства!</p></li>
             </ul>
           </li>
-          <li class="Sedona-advantages-image">
-            <img src="#" alt="Мост Дьявола"></li><!--при оформлении этот блок ли равен двум блокам ли из этого списка без картинки-->
           <li class="blue-background white-text">
+            <img src="#" alt="Мост Дьявола" class="Sedona-advantages-image"><!--при оформлении этот блок ли равен двум блокам ли из этого списка без картинки-->
             <h3 class="Sedona-advantages">Там есть мост Дьявола</h3>
             <p class="advantage-number">- №2 -</p>
             <p class="advantage-description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
@@ -92,6 +86,7 @@
         <p class="main-text-description white-text">Подпишитесь на рассылку</p>
         <p class="additional-text-description white-text">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
         <form action="https://echo.htmlacademy.ru/" method="post">
+          <label class="visually-hidden">Ввод е-мэйла</label>
           <input type="email" name="client-email" placeholder="Ваш e-mail">
           <input type="submit" value="Подписаться">
         </form>
