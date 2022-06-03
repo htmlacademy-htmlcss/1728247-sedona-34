@@ -9,38 +9,110 @@
       <nav class="main-navigation">
         <ul class="main-menu"><!--При оформлении убрать вывод значков элементов списка-->
           <li class="main-menu-item">
-            <a href="index.html"><img src="#" alt="Логотип Седоны"></a></li>
+            <a href="index.html" class="main-menu-link"><img src="#" alt="Логотип Седоны"></a></li>
           <li class="main-menu-item">
-            <a href="index.html">Главная</a></li>
+            <a href="index.html" class="main-menu-link">Главная</a></li>
           <li class="main-menu-item">
-            <a href="#">О Седоне</a></li>
+            <a href="#" class="main-menu-link">О Седоне</a></li>
           <li class="main-menu-item">
-            <a href="#">Гостиницы</a></li>
+            <a class="main-menu-link main-menu-link-current">Гостиницы</a></li>
+        </ul>
+        <ul class="main-menu menu-user">  
           <li class="main-menu-item">
-            <a href="#">Поиск</a></li><!--при оформлении будет сделано значком "лупа"--> 
+            <a href="#" class="main-menu-link"><span class="visually-hidden">Поиск</span></a></li><!--при оформлении будет сделано значком "лупа"--> 
           <li class="main-menu-item">
-            <a href="#">Избранное<sup>12</sup></a></li><!--при оформлении будет сделано значком "сердечко" со "степенью" количества-->
+            <a href="#" class="main-menu-link"><span class="visually-hidden">Избранное</span><sup>12</sup></a></li><!--при оформлении будет сделано значком "сердечко" со "степенью" количества-->
           <li class="main-menu-item">
             <button class="want-to-come-here">Хочу сюда!</button></li><!--при оформлении будет выглядеть внешне как кнопка; открывает попап поиска отеля-->
         </ul>
       </nav>
     </header>
     <main>
-      <section class="catalog-banner">
-        <h1 class="catalog-banner-name">Гостиницы Седоны</h1>
-        
+      <header class="catalog-header">
+        <h1 class="catalog-title">Гостиницы Седоны</h1>
+        <ul class="breadcrumbs">
+          <li class="breadcrumbs-item">
+            <a class="breadcrumbs-link" href="index.html"><span class="visually-hidden">Главная</span></a><!--при оформлении будет сделано значком "домик"-->
+          </li>
+          <li class="breadcrumbs-item">
+            <a class="breadcrumbs-link">Гостиницы</a>
+          </li>
+        </ul>
+      </header>
+      <section class="catalog-filter">
+        <form class="catalog-hotel-filter" action="https://echo.htmlacademy.ru" method="get">
+          <fieldset class="catalog-filter-group">
+            <legend class="catalog-filter-title">Инфраструктура:</legend>
+             <ul class="catalog-filter-list">
+              <li class="catalog-filter-item">
+                <label class="control">
+                 <input class="control-input" type="checkbox" name="pool" checked> 
+                 Бассейн
+                </label>
+              </li>
+              <li class="catalog-filter-item">
+                <label class="control">
+                 <input class="control-input" type="checkbox" name="parking" checked> 
+                 Парковка
+                </label>
+              </li>
+              <li class="catalog-filter-item">
+                <label class="control">
+                 <input class="control-input" type="checkbox" name="Wi-Fi"> 
+                 Wi-Fi
+                </label>
+              </li>
+             </ul>
+          </fieldset>
+
+          <fieldset class="catalog-filter-group">
+            <legend class="catalog-filter-title">Тип Жилья:</legend>
+            <ul class="catalog-filter-list">
+              <li class="catalog-filter-item">
+                <label class="control">
+                 <input class="control-input" type="radio" name="hotel-type" value="hotel" checked> 
+                 Гостиница
+                </label>
+              </li>
+              <li class="catalog-filter-item">
+                <label class="control">
+                 <input class="control-input" type="radio" name="hotel-type" value="motel"> 
+                 Мотель
+                </label>
+              </li>
+              <li class="catalog-filter-item">
+                <label class="control">
+                 <input class="control-input" type="radio" name="hotel-type" value="apartment"> 
+                 Апартаменты
+                </label>
+              </li>
+             </ul>
+          </fieldset>
+
+          <fieldset class="catalog-filter-group">
+            <legend class="catalog-filter-title">Стоимость, Р:</legend>
+            <input class="price-filter" type="number" name="price-from" min="0" placeholder="0">
+            <span class="visually-hidden">от</span><!--при оформлении должно быть внутри формы справа-->
+            <input class="price-filter" type="number" name="price-to" max="9000" placeholder="9000">
+            <span class="visually-hidden">до</span><!--при оформлении должно быть внутри формы справа-->
+          </fieldset>
+          
+          <button class="filter-button" type="submit">Применить</button>
+          <button class="filter-reset-button" type="submit">Сбросить</button>
+        </form>
       </section>
+
       <section class="hotel-search-results">
-        <h2 class="catalog-results-name">Найдено гостиниц:</h2>
+        <h2 class="catalog-results-title">Найдено гостиниц:</h2>
        
       </section>
    
     </main>
-    <footer>
+    <footer class="page-footer">
       <section class="subscription">
         <p class="main-text-description white-text">Подпишитесь на рассылку</p>
         <p class="additional-text-description white-text">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
-        <form action="https://echo.htmlacademy.ru/" method="post">
+        <form class="email-form" action="https://echo.htmlacademy.ru/" method="post">
           <label class="visually-hidden">Ввод е-мэйла</label>
           <input type="email" name="client-email" placeholder="Ваш e-mail">
           <input type="submit" value="Подписаться">
@@ -51,9 +123,9 @@
           <li class="social-media-vk"><a href="https://vk.com/htmlacademy"><img src="#" alt="Вконтакте"></a></li><!--на странице будет значок ВК-->
           <li class="social-media-telegram"><a href="https://t.me/htmlacademy"><img src="#" alt="Telegram"></a></li><!--на странице будет значок Телеграм-->
           <li class="social-media-youtube"><a href="https://www.youtube.com/user/htmlacademyru"><img src="#" alt="Youtube"></a></li><!--на странице будет значок Ютуб-->
-          <li class="phone-number"><span>+7 (812) 812-12-12</span></li>
-          <li class="htmlacademy-logo"><a href="https://htmlacademy.ru"><img src="#" alt="Сайт html-academy"></a></li><!--на странице будет лого Академии-->
-        </ul>
+        </ul>  
+          <span class="phone-number">+7 (812) 812-12-12</span>
+          <a href="https://htmlacademy.ru" class="htmlacademy-logo"><img src="#" alt="Сайт html-academy"></a><!--на странице будет лого Академии-->
       </section>
     </footer>
   </body>

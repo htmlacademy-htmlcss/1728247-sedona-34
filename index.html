@@ -9,17 +9,19 @@
       <nav class="main-navigation">
         <ul class="main-menu"><!--При оформлении убрать вывод значков элементов списка-->
           <li class="main-menu-item">
-            <a href="#"><img src="#" alt="Логотип Седоны"></a></li>
+            <a class="main-menu-link"><img src="#" alt="Логотип Седоны"></a></li>
           <li class="main-menu-item">
-            <a href="#">Главная</a></li>
+            <a class="main-menu-link main-menu-link-current">Главная</a></li>
           <li class="main-menu-item">
-            <a href="#">О Седоне</a></li>
+            <a href="#" class="main-menu-link">О Седоне</a></li>
           <li class="main-menu-item">
-            <a href="catalog.html">Гостиницы</a></li>
+            <a href="catalog.html" class="main-menu-link">Гостиницы</a></li>
+        </ul>
+        <ul class="main-menu menu-user">   
           <li class="main-menu-item">
-            <a href="#">Поиск</a></li><!--при оформлении будет сделано значком "лупа"--> 
-           <li class="main-menu-item">
-            <a href="#">Избранное<sup>12</sup></a></li><!--при оформлении будет сделано значком "сердечко" со "степенью" количества-->
+            <a href="#" class="main-menu-link"><span class="visually-hidden">Поиск</span></a></li><!--при оформлении будет сделано значком "лупа"--> 
+          <li class="main-menu-item">
+            <a href="#" class="main-menu-link"><span class="visually-hidden">Избранное</span><sup>12</sup></a></li><!--при оформлении будет сделано значком "сердечко" со "степенью" количества-->
           <li class="main-menu-item">
             <button class="want-to-come-here">Хочу сюда!</button></li><!--при оформлении будет выглядеть внешне как кнопка; открывает попап поиска отеля-->
         </ul>
@@ -81,11 +83,11 @@
         <button class="hotel-search-popup">Поиск гостиницы в Седоне</button>
       </section>
     </main>
-    <footer>
+    <footer class="page-footer">
       <section class="subscription subscription-with-background">
         <p class="main-text-description white-text">Подпишитесь на рассылку</p>
         <p class="additional-text-description white-text">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
-        <form action="https://echo.htmlacademy.ru/" method="post">
+        <form class="email-form" action="https://echo.htmlacademy.ru/" method="post">
           <label class="visually-hidden">Ввод е-мэйла</label>
           <input type="email" name="client-email" placeholder="Ваш e-mail">
           <input type="submit" value="Подписаться">
@@ -96,9 +98,9 @@
           <li class="social-media-vk"><a href="https://vk.com/htmlacademy"><img src="#" alt="Вконтакте"></a></li><!--на странице будет значок ВК-->
           <li class="social-media-telegram"><a href="https://t.me/htmlacademy"><img src="#" alt="Telegram"></a></li><!--на странице будет значок Телеграм-->
           <li class="social-media-youtube"><a href="https://www.youtube.com/user/htmlacademyru"><img src="#" alt="Youtube"></a></li><!--на странице будет значок Ютуб-->
-          <li class="phone-number"><span>+7 (812) 812-12-12</span></li>
-          <li class="htmlacademy-logo"><a href="https://htmlacademy.ru"><img src="#" alt="Сайт html-academy"></a></li><!--на странице будет лого Академии-->
-        </ul>
+        </ul>  
+          <span class="phone-number">+7 (812) 812-12-12</span>
+          <a class="htmlacademy-logo" href="https://htmlacademy.ru"><img src="#" alt="Сайт html-academy"></a><!--на странице будет лого Академии-->
       </section>
     </footer>
   </body>
