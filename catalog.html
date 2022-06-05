@@ -103,11 +103,109 @@
       </section>
 
       <section class="hotel-search-results">
-        <h2 class="catalog-results-title">Найдено гостиниц:</h2>
-       
+        <h2 class="catalog-results-title visually-hidden">Результаты поиска</h2>
+        <p class="main-text-description left">Найдено гостиниц:<span class="hotel-quantity">38</span></p>
+
+        <select class="select-control" aria-label="Сортировка">
+          <option value="cheap">Сначала дешёвые</option>
+          <option value="popular">Сначала популярные</option>
+          <option value="expensive">Сначала дорогие</option>
+        </select>
+
+        <a href="#" class="button">
+          <span class="visually-hidden">Показать средние значки</span>
+        </a>
+        <a href="#" class="button-light">
+          <span class="visually-hidden">Показать крупные значки</span>
+        </a>
+        <a href="#" class="button-light">
+          <span class="visually-hidden">Показать списком</span>
+        </a>
+
+        <ul class="hotel-list">
+          <li class="hotel-card">
+            <a class="hotel-card-link" href="#">
+              <img class="hotel-card-image" src="#" alt="Amara Resort & Spa Hotel">
+              <h3 class="hotel-card-title">Amara Resort & Spa</h3>
+            </a>
+            <span class="hotel-type">Гостиница</span>
+            <span class="hotel-price">От 4000 Р</span>
+            <a class="brown-button" href="#">Подробнее</a><!--Переход на отдельную страницу гостиницы-->
+            <button class="blue-button">В избранное</button><!--добавляет гостиницу в избранное, увеличивает счётчик над сердечком-->
+            <img class="four-stars" src="#" alt="Звёздность гостиницы - четыре звезды">
+            <a class="grey-button" href="#">Рейтинг: 8.5</a><!--будет оформлено как кнопка, переход на страницу с отзывами о данной гостинице-->
+          </li>
+
+          <li class="hotel-card">
+            <a class="hotel-card-link" href="#">
+              <img class="hotel-card-image" src="#" alt="Villas at Poco Diablo Hotel">
+              <h3 class="hotel-card-title">Villas at Poco Diablo</h3>
+            </a>
+            <span class="hotel-type">Гостиница</span>
+            <span class="hotel-price">От 5000 Р</span>
+            <a class="brown-button" href="#">Подробнее</a><!--Переход на отдельную страницу гостиницы-->
+            <button class="blue-button-active">В избранном</button><!--добавляет гостиницу в избранное, увеличивает счётчик над сердечком-->
+            <img class="four-stars" src="#" alt="Звёздность гостиницы - четыре звезды">
+            <a class="grey-button" href="#">Рейтинг: 9.2</a><!--будет оформлено как кнопка, переход на страницу с отзывами о данной гостинице-->
+          </li>
+
+          <li class="hotel-card">
+            <a class="hotel-card-link" href="#">
+              <img class="hotel-card-image" src="#" alt="Desert Quail Inn Hotel">
+              <h3 class="hotel-card-title">Desert Quail Inn</h3>
+            </a>
+            <span class="hotel-type">Гостиница</span>
+            <span class="hotel-price">От 2500 Р</span>
+            <a class="brown-button" href="#">Подробнее</a><!--Переход на отдельную страницу гостиницы-->
+            <button class="blue-button">В избранное</button><!--добавляет гостиницу в избранное, увеличивает счётчик над сердечком-->
+            <img class="three-stars" src="#" alt="Звёздность гостиницы - три звезды">
+            <a class="grey-button" href="#">Рейтинг: 6.9</a><!--будет оформлено как кнопка, переход на страницу с отзывами о данной гостинице-->
+          </li>
+
+          <li class="hotel-card">
+            <a class="hotel-card-link" href="#">
+              <img class="hotel-card-image" src="#" alt="GreenTree Inn Hotel">
+              <h3 class="hotel-card-title">GreenTree Inn</h3>
+            </a>
+            <span class="hotel-type">Гостиница</span>
+            <span class="hotel-price">От 1500 Р</span>
+            <a class="brown-button" href="#">Подробнее</a><!--Переход на отдельную страницу гостиницы-->
+            <button class="blue-button">В избранное</button><!--добавляет гостиницу в избранное, увеличивает счётчик над сердечком-->
+            <img class="two-stars" src="#" alt="Звёздность гостиницы - две звезды">
+            <a class="grey-button" href="#">Рейтинг: 5.0</a><!--будет оформлено как кнопка, переход на страницу с отзывами о данной гостинице-->
+          </li>
+        </ul>
+
+        <ul class="pagination">
+          <li class="pagination-item">
+            <a class="pagination-link pagination-current" href="#">1</a>
+          </li>
+          <li class="pagination-item">
+            <a class="pagination-link" href="#">2</a>
+          </li>
+          <li class="pagination-item">
+            <a class="pagination-link" href="#">3</a>
+          </li>
+          <li class="pagination-item">
+            <a class="pagination-link" href="#">4</a>
+          </li>
+          <li class="pagination-item">
+            <a class="pagination-link" href="#">...</a>
+          </li>
+          <li class="pagination-item">
+            <a class="pagination-link" href="#">10</a>
+          </li>
+        </ul>
+
+        <span class="hotels-on-page">Гостиниц на странице:</span>
+        <select class="quantity-control" aria-label="Гостиниц на странице">
+          <option value="four">4</option>
+          <option value="eight">8</option>
+          <option value="sixteen">16</option>
+        </select>
       </section>
-   
     </main>
+    
     <footer class="page-footer">
       <section class="subscription">
         <p class="main-text-description white-text">Подпишитесь на рассылку</p>
