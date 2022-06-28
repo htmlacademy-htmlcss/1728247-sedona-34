@@ -1,0 +1,163 @@
+@font-face {
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: 400;
+    src:url("../fonts/ptsans-400.woff2") format("woff2");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: 700;
+    src:url("../fonts/ptsans-700.woff2") format("woff2");
+    font-display: swap;
+  }
+
+  body {
+    font-family: "PT Sans", sans-serif;
+    font-size: 18px;
+    line-height: 21px;
+    color: #000000;
+    background-color: #ffffff;
+  }
+
+  .main-header {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+    text-transform: capitalize;
+    text-align: center;
+  }
+
+  .main-menu-link {
+    color: #000000;
+    text-decoration: none;
+  }
+
+  .button-want-here {
+    color:#ffffff;
+    background-color: #756157;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+  }
+
+  .main-banner {
+    background-image: url("../images/index-background.jpg");
+    background-color: #82B3D3;
+    background-repeat: no-repeat;
+    min-height: 482px;
+    background-size: 100% 100%;
+    text-align: center;
+  }
+
+  .main-banner-divider {
+    background-image: url("../images/index-divider.svg");
+    background-repeat: no-repeat;
+    height: 57px;
+    background-size: 100% auto;
+  }
+
+  .main-banner-text {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 51px;
+    margin-bottom: 82px;
+  }
+
+  .sedona-main-advantages {
+    text-align: center;
+  }
+
+  .main-text-description {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    text-transform: uppercase;
+  }
+
+  .additional-text-description {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 26px;
+    color: #333333;
+  }
+
+  .sedona-advantages, .sedona-additional-advantage {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  .advantage-description {
+    color: #333333;
+  }
+
+  .first-sedona-advantage, .second-sedona-advantage,
+   .first-sedona-advantage p, .second-sedona-advantage p {
+    background-color: #82B3D3;
+    color: #ffffff;
+  }
+
+  .first-additional-advantage, .third-additional-advantage,
+   .third-sedona-advantage, .fifth-sedona-advantage {
+    background-color: rgba(131, 179, 211, 0.12);
+  }
+
+  .fouth-sedona-advantage {
+    background-color: rgba(131, 179, 211, 0.2);
+  }
+
+  .hotel-search {
+    text-align: center;
+  }
+
+  .hotel-search-popup {
+    background-color: #756157;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 36px;
+    text-transform: uppercase;
+  }
+
+  .subscription-with-background {
+    background-image: url("../images/subscription-background.jpg");
+    background-repeat: no-repeat;
+    height: 411px;
+    background-size: 100% 100%;
+    text-align: center;
+    padding-top: 94px;
+    background-color:#82B3D3;
+    color:#ffffff;
+  }
+
+  .subscription-with-background p {
+    color: #ffffff;
+  }
+
+  .button-subscription {
+    background-color: #82B3D3;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 36px;
+    text-transform: uppercase;
+  }
+
+  .our-contacts {
+    text-align: center;
+  }
+
+  .phone-number {
+    font-weight: 400;
+    color: #000000;
+    font-size: 40px;
+    line-height: 40px;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
