@@ -18,8 +18,14 @@
     font-family: "PT Sans", sans-serif;
     font-size: 18px;
     line-height: 21px;
+    font-weight: 400;
     color: #000000;
     background-color: #ffffff;
+    margin: 0;
+  }
+
+  body li {
+    list-style: none;
   }
 
   .main-header {
@@ -38,10 +44,12 @@
   .button-want-here {
     color:#ffffff;
     background-color: #756157;
+    font-family: "PT Sans";
     font-weight: 700;
     font-size: 16px;
     line-height: 20px;
     text-transform: uppercase;
+    border: none;
   }
 
   .main-banner {
@@ -57,7 +65,8 @@
     background-image: url("../images/index-divider.svg");
     background-repeat: no-repeat;
     height: 57px;
-    background-size: 100% auto;
+    background-size: 100% 100%;
+    background-position: center bottom;
   }
 
   .main-banner-text {
@@ -119,10 +128,12 @@
   .hotel-search-popup {
     background-color: #756157;
     color: #ffffff;
+    font-family: "PT Sans";
     font-weight: 700;
     font-size: 20px;
     line-height: 36px;
     text-transform: uppercase;
+    border: none;
   }
 
   .subscription-with-background {
@@ -143,10 +154,12 @@
   .button-subscription {
     background-color: #82B3D3;
     color: #ffffff;
+    font-family: "PT Sans";
     font-weight: 700;
     font-size: 20px;
     line-height: 36px;
     text-transform: uppercase;
+    border: none;
   }
 
   .our-contacts {
@@ -160,4 +173,162 @@
     line-height: 40px;
     text-decoration: none;
     text-transform: uppercase;
+  }
+
+  .catalog-header {
+    background-image: url("../images/background-filter.jpg");
+    background-repeat: no-repeat;
+
+    background-size: 100% 100%;
+    background-color: #82B3D3;
+    color:#ffffff;
+  }
+
+  .catalog-title {
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 78px;
+    padding-left: 70px;
+    padding-top: 35px;
+  }
+
+  .breadcrumbs-link {
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  .catalog-filter-title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+    text-transform: capitalize;
+  }
+
+  .filter-button {
+    background-color: #82B3D3;
+    color: #ffffff;
+    font-family: "PT Sans";
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    border: none;
+  }
+
+  .filter-reset-button {
+    background-color: transparent;
+    color: #ffffff;
+    font-family: "PT Sans";
+    text-align: center;
+    border: none;
+  }
+
+  .select-control {
+    font-family: "PT Sans";
+    font-size: 18px;
+    line-height: 21px;
+    color: #333333;
+  }
+
+  .hotel-card-link {
+    color: #000000;
+    font-family: "PT Sans";
+    text-decoration: none;
+  }
+  .hotel-card-title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: left;
+  }
+
+  .hotel-type, .hotel-price {
+    color: #333333;
+    text-align: left;
+  }
+
+  .button-details {
+    background-color: #756157;
+    font-family: "PT Sans";
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    border:none;
+    text-decoration: none;
+  }
+
+  .button-favourite {
+    background-color: #82B3D3;
+    font-family: "PT Sans";
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    border: none;
+  }
+
+  .button-favourite-active {
+    background-color: #7DB54F;
+    font-family: "PT Sans";
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    border: none;
+  }
+
+  .button-rating {
+    background-color: #F2F2F2;
+    font-family: "PT Sans";
+    font-weight: 700;
+    color: #333333;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    border: none;
+    text-decoration: none;
+  }
+
+  .pagination-link {
+    background-color: #82B3D3;
+    color: #ffffff;
+    font-family: "PT Sans";
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 36px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  .pagination-current {
+    background-color: #F2F2F2;
+    color: #000000;
+  }
+
+  .hotels-on-page {
+    color: #333333;
+  }
+
+  .quantity-control {
+    font-family: "PT Sans";
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #333333;
+  }
+
+  .subscription {
+    text-align: center;
+  }
+
+  .subscription p {
+    color: #333333;
   }

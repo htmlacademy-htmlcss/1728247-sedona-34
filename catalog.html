@@ -20,9 +20,9 @@
         </ul>
         <ul class="main-menu menu-user">
           <li class="main-menu-item">
-            <a href="#" class="main-menu-link"><span class="visually-hidden">Поиск</span></a></li><!--при оформлении будет сделано значком "лупа"-->
+            <a href="#" class="main-menu-link search"><span class="visually-hidden">Поиск</span></a></li><!--при оформлении будет сделано значком "лупа"-->
           <li class="main-menu-item">
-            <a href="#" class="main-menu-link"><span class="visually-hidden">Избранное</span><sup>12</sup></a></li><!--при оформлении будет сделано значком "сердечко" со "степенью" количества-->
+            <a href="#" class="main-menu-link favourite"><span class="visually-hidden">Избранное</span><sup>12</sup></a></li><!--при оформлении будет сделано значком "сердечко" со "степенью" количества-->
           <li class="main-menu-item">
             <button class="button-want-here" type="button">Хочу сюда!</button></li><!--при оформлении будет выглядеть внешне как кнопка; открывает попап поиска отеля-->
         </ul>
@@ -107,7 +107,7 @@
 
       <section class="hotel-search-results">
         <h2 class="catalog-results-title visually-hidden">Результаты поиска</h2>
-        <p class="main-text-description left">Найдено гостиниц:<span class="hotel-quantity">38</span></p>
+        <p class="main-text-description">Найдено гостиниц:<span class="hotel-quantity"> 38</span></p>
 
         <select class="select-control" aria-label="Сортировка">
           <option value="cheap">Сначала дешёвые</option>
@@ -216,8 +216,8 @@
 
     <footer class="page-footer">
       <section class="subscription">
-        <h2 class="main-text-description white-text">Подпишитесь на рассылку</h2>
-        <p class="additional-text-description white-text">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
+        <h2 class="main-text-description">Подпишитесь на рассылку</h2>
+        <p class="additional-text-description">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
         <form class="email-form" action="https://echo.htmlacademy.ru/" method="post">
           <label class="visually-hidden">Ввод е-мэйла</label>
           <input type="email" name="client-email" placeholder="Ваш e-mail">
@@ -231,8 +231,10 @@
           <li class="social-media-telegram"><a href="https://t.me/htmlacademy"><img src="images/sm-telegram.svg" width="18" height="15" alt="Telegram"></a></li><!--на странице будет значок Телеграм-->
           <li class="social-media-youtube"><a href="https://www.youtube.com/user/htmlacademyru"><img src="images/sm-youtube.svg" width="22" height="17" alt="Youtube"></a></li><!--на странице будет значок Ютуб-->
         </ul>
-          <a class="phone-number" href="tel:+78128121212">+7 (812) 812-12-12</a>
-          <a href="https://htmlacademy.ru" class="htmlacademy-logo"><img src="images/logo-html-academy.svg" width="115" height="33" alt="Сайт html-academy"></a><!--на странице будет лого Академии-->
+        <ul class="contacts">
+          <li><a class="phone-number" href="tel:+78128121212">+7 (812) 812-12-12</a></li>
+          <li><a class="htmlacademy-logo" href="https://htmlacademy.ru"><img src="images/logo-html-academy.svg" width="115" height="33" alt="Сайт html-academy"></a></li><!--на странице будет лого Академии-->
+        </ul>
       </section>
     </footer>
   </body>
