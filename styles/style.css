@@ -28,6 +28,7 @@
     list-style: none;
   }
 
+  /*Header*/
   .main-header {
     font-weight: 700;
     font-size: 20px;
@@ -52,12 +53,13 @@
     border: none;
   }
 
+  /*main banner index*/
   .main-banner {
     background-image: url("../images/index-background.jpg");
     background-color: #82B3D3;
     background-repeat: no-repeat;
     min-height: 482px;
-    background-size: 100% 100%;
+    background-size: cover;
     text-align: center;
   }
 
@@ -77,6 +79,7 @@
     margin-bottom: 82px;
   }
 
+  /*advantages index*/
   .sedona-main-advantages {
     text-align: center;
   }
@@ -106,21 +109,22 @@
     color: #333333;
   }
 
-  .first-sedona-advantage, .second-sedona-advantage,
-   .first-sedona-advantage p, .second-sedona-advantage p {
+  .real-city, .devil-bridge,
+   .real-city p, .devil-bridge p {
     background-color: #82B3D3;
     color: #ffffff;
   }
 
-  .first-additional-advantage, .third-additional-advantage,
-   .third-sedona-advantage, .fifth-sedona-advantage {
+  .apartments, .souvenirs,
+   .area, .tourists {
     background-color: rgba(131, 179, 211, 0.12);
   }
 
-  .fouth-sedona-advantage {
+  .road {
     background-color: rgba(131, 179, 211, 0.2);
   }
 
+  /*hotel-search section index*/
   .hotel-search {
     text-align: center;
   }
@@ -136,11 +140,12 @@
     border: none;
   }
 
+  /*subscription index*/
   .subscription-with-background {
     background-image: url("../images/subscription-background.jpg");
     background-repeat: no-repeat;
     height: 411px;
-    background-size: 100% 100%;
+    background-size: cover;
     text-align: center;
     padding-top: 94px;
     background-color:#82B3D3;
@@ -162,6 +167,7 @@
     border: none;
   }
 
+  /*footer*/
   .our-contacts {
     text-align: center;
   }
@@ -175,11 +181,12 @@
     text-transform: uppercase;
   }
 
+  /*header with filters catalog*/
   .catalog-header {
     background-image: url("../images/background-filter.jpg");
     background-repeat: no-repeat;
 
-    background-size: 100% 100%;
+    background-size: cover;
     background-color: #82B3D3;
     color:#ffffff;
   }
@@ -222,6 +229,7 @@
     border: none;
   }
 
+  /*hotel-search results catalog*/
   .select-control {
     font-family: "PT Sans";
     font-size: 18px;
@@ -296,6 +304,7 @@
     text-decoration: none;
   }
 
+  /*pagination and cards-quantity-on-page catalog*/
   .pagination-link {
     background-color: #82B3D3;
     color: #ffffff;
@@ -325,6 +334,7 @@
     color: #333333;
   }
 
+  /*subscription catalog*/
   .subscription {
     text-align: center;
   }
