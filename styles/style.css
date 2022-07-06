@@ -21,13 +21,16 @@
     font-weight: 400;
     color: #000000;
     background-color: #ffffff;
-    margin: 0;
   }
 
   body li {
     list-style: none;
   }
 
+  .site-container {
+    margin: 0 auto;
+    width: 1200px;
+  }
   /*Header*/
   .main-header {
     font-weight: 700;
