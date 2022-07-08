@@ -33,7 +33,7 @@
   }
 
   body li {
-    list-style: none;
+    list-style-type: none;
   }
 
   .main-container {
@@ -42,6 +42,17 @@
 
   .page-container {
     margin: 0 auto;
+  }
+
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
   }
 
   /*Header*/
@@ -57,12 +68,15 @@
     padding:0;
     width:480px;
     display:flex;
+    flex-wrap: wrap;
   }
 
   .menu-user {
     max-width:300px;
     margin-left:auto;
     display:flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
   }
 
 
@@ -249,6 +263,7 @@
     padding:0;
     max-width:200px;
     justify-content:space-between;
+    flex-wrap: wrap;
   }
 
   .social-media-vk, .social-media-telegram, .social-media-youtube {
@@ -284,24 +299,31 @@
 
   .button-container {
     width:160.45px;
-
   }
 
   .catalog-header {
     background-image: url("../images/background-filter.jpg");
     background-repeat: no-repeat;
-
     background-size: cover;
     background-color: #82B3D3;
     color:#ffffff;
+  }
+
+  .catalog-header-title {
+    width: 1060px;
+    margin:0 auto;
   }
 
   .catalog-title {
     font-weight: 700;
     font-size: 60px;
     line-height: 78px;
-    padding-left: 70px;
     padding-top: 35px;
+  }
+
+  .breadcrumbs {
+    padding:0;
+    margin:0;
   }
 
   .breadcrumbs-link {
@@ -335,11 +357,19 @@
   }
 
   /*hotel-search results catalog*/
+  .hotel-search-title-container {
+    display:flex;
+    width:1060px;
+    margin:0 auto;
+    justify-content:space-between;
+  }
+
   .select-control {
     font-family: "PT Sans";
     font-size: 18px;
     line-height: 21px;
     color: #333333;
+    width:290px;
   }
 
   .hotel-list {
@@ -348,11 +378,18 @@
     padding:0;
     width:1056px;
     flex-wrap:wrap;
+    justify-content: space-between;
   }
 
   .hotel-card {
-    width:340px;
+    width:300px;
+    padding:20px;
     }
+
+  .hotel-card-image {
+    max-width:100%;
+    height:auto;
+  }
 
   .hotel-card-link {
     color: #000000;
@@ -422,6 +459,30 @@
   }
 
   /*pagination and cards-quantity-on-page catalog*/
+  .pagination-quantity-container {
+    display:flex;
+    width:1060px;
+    margin:0 auto;
+    justify-content:space-between;
+  }
+
+  .pagination {
+    display:flex;
+    width:400px;
+    justify-content: space-between;
+  }
+
+  .pagination-item {
+    width:60px;
+    padding:0;
+    margin:0;
+  }
+
+  .quantity-container {
+    max-width:400px;
+    justify-content: space-between;
+  }
+
   .pagination-link {
     background-color: #82B3D3;
     color: #ffffff;
@@ -449,6 +510,7 @@
     font-size: 18px;
     line-height: 21px;
     color: #333333;
+    width:160px;
   }
 
   /*subscription catalog*/
