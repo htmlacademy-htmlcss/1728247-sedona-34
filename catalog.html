@@ -8,7 +8,7 @@
   <body>
     <header class="main-header">
       <nav class="main-navigation">
-        <a class="main-menu-link logo"><img src="images/logo-sedona.svg" width="139" height="70" alt="Логотип Седоны"></a>
+        <div class="logo-container"><a class="logo"><img src="images/logo-sedona.svg" width="139" height="70" alt="Логотип Седоны"></a></div>
         <ul class="main-menu"><!--При оформлении убрать вывод значков элементов списка-->
           <li class="main-menu-item">
             <a href="index.html" class="main-menu-link">Главная</a></li>
@@ -34,10 +34,10 @@
           <h1 class="catalog-title">Гостиницы Седоны</h1>
           <ul class="breadcrumbs">
            <li class="breadcrumbs-item">
-             <a class="breadcrumbs-link" href="index.html"><span class="visually-hidden">Главная</span></a><!--при оформлении будет сделано значком "домик"-->
+             <a class="breadcrumbs-link main-link" href="index.html"><span class="visually-hidden">Главная</span></a><!--при оформлении будет сделано значком "домик"-->
            </li>
            <li class="breadcrumbs-item">
-             <a class="breadcrumbs-link">Гостиницы</a>
+             <a class="breadcrumbs-link hotels-link">Гостиницы</a>
            </li>
           </ul>
         </header>
@@ -116,7 +116,7 @@
             <option value="expensive">Сначала дорогие</option>
           </select>
 
-          <ul>
+          <ul class="view-on-page">
             <li>
               <a href="#" class="button-view-on-page button-view-on-page-active">
               <span class="visually-hidden">Показать средние значки</span>
@@ -138,12 +138,14 @@
               <img class="hotel-card-image" src="images/hotel-amara-resort-and-spa.jpg" width="300" height="211" alt="Amara Resort & Spa Hotel">
               <h3 class="hotel-card-title">Amara Resort & Spa</h3>
             </a>
-            <span class="hotel-type">Гостиница</span>
-            <span class="hotel-price">От 4000 Р</span>
-            <a class="button-details" href="#">Подробнее</a><!--Переход на отдельную страницу гостиницы-->
-            <button class="button-favourite" type="button">В избранное</button><!--добавляет гостиницу в избранное, увеличивает счётчик над сердечком-->
-            <img class="four-stars" src="images/four-stars.svg" alt="Звёздность гостиницы - четыре звезды">
-            <a class="button-rating" href="#">Рейтинг: 8.5</a><!--будет оформлено как кнопка, переход на страницу с отзывами о данной гостинице-->
+
+              <span class="hotel-type">Гостиница</span>
+              <span class="hotel-price">От 4000 Р</span>
+              <a class="button-details" href="#">Подробнее</a><!--Переход на отдельную страницу гостиницы-->
+              <button class="button-favourite" type="button">В избранное</button><!--добавляет гостиницу в избранное, увеличивает счётчик над сердечком-->
+              <img class="four-stars" src="images/four-stars.svg" alt="Звёздность гостиницы - четыре звезды">
+              <a class="button-rating" href="#">Рейтинг: 8.5</a><!--будет оформлено как кнопка, переход на страницу с отзывами о данной гостинице-->
+
           </li>
 
           <li class="hotel-card">
@@ -174,7 +176,7 @@
 
           <li class="hotel-card">
             <a class="hotel-card-link" href="#">
-              <img class="hotel-card-image" src="images/hotel-greentree-inn.jpg" width="300" height="211" alt="GreenTree Inn Hotel">
+              <img class="hotel-card-image" src="images/hotel-greentree-inn.jpg" width="300" height="211" alt="GreenTree Inn Hotel.">
               <h3 class="hotel-card-title">GreenTree Inn</h3>
             </a>
             <span class="hotel-type">Гостиница</span>
@@ -223,24 +225,24 @@
     <footer class="page-footer">
       <section class="subscription">
         <div class="subscription-container">
-        <h2 class="main-text-description">Подпишитесь на рассылку</h2>
+        <h2 class="main-text-description subscribe">Подпишитесь на рассылку</h2>
         <p class="additional-text-description">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
         <form class="email-form" action="https://echo.htmlacademy.ru/" method="post">
           <label class="visually-hidden">Ввод е-мэйла</label>
-          <input type="email" name="client-email" placeholder="Ваш e-mail">
+          <input type="email" name="client-email" class="email-address" placeholder="Ваш e-mail">
           <button class="button-subscription" type="submit">Подписаться</button>
         </form>
         </div>
       </section>
       <section class="our-contacts">
-        <h2 class="visually-hidden">Контакты</h2>
+        <h2 class="visually-hidden">Контакты.</h2>
         <ul class="social-media"><!--При оформлении убрать вывод значков элементов списка-->
-          <li class="social-media-vk"><a href="https://vk.com/htmlacademy"><img src="images/sm-vk.svg" width="24" height="14" alt="Вконтакте"></a></li><!--на странице будет значок ВК-->
-          <li class="social-media-telegram"><a href="https://t.me/htmlacademy"><img src="images/sm-telegram.svg" width="18" height="15" alt="Telegram"></a></li><!--на странице будет значок Телеграм-->
-          <li class="social-media-youtube"><a href="https://www.youtube.com/user/htmlacademyru"><img src="images/sm-youtube.svg" width="22" height="17" alt="Youtube"></a></li><!--на странице будет значок Ютуб-->
+          <li class="social-media-vk"><a href="https://vk.com/htmlacademy"><img src="images/sm-vk.svg" width="24" height="14" alt="Вконтакте."></a></li><!--на странице будет значок ВК-->
+          <li class="social-media-telegram"><a href="https://t.me/htmlacademy"><img src="images/sm-telegram.svg" width="18" height="15" alt="Telegram."></a></li><!--на странице будет значок Телеграм-->
+          <li class="social-media-youtube"><a href="https://www.youtube.com/user/htmlacademyru"><img src="images/sm-youtube.svg" width="22" height="17" alt="Youtube."></a></li><!--на странице будет значок Ютуб-->
         </ul>
           <a class="phone-number" href="tel:+78128121212">+7 (812) 812-12-12</a>
-          <a class="htmlacademy-logo" href="https://htmlacademy.ru"><img src="images/logo-html-academy.svg" width="115" height="33" alt="Сайт html-academy"></a><!--на странице будет лого Академии-->
+          <a class="htmlacademy-logo" href="https://htmlacademy.ru"><img src="images/logo-html-academy.svg" width="115" height="33" alt="Сайт html-academy."></a><!--на странице будет лого Академии-->
       </section>
     </footer>
   </body>

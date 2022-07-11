@@ -8,7 +8,7 @@
   <body>
     <header class="main-header">
       <nav class="main-navigation">
-        <div class="logo-container"><a class="main-menu-link logo"><img src="images/logo-sedona.svg" width="139" height="70" alt="Логотип Седоны"></a></div>
+        <div class="logo-container"><a class="logo"><img src="images/logo-sedona.svg" width="139" height="70" alt="Логотип Седоны."></a></div>
         <ul class="main-menu"><!--При оформлении убрать вывод значков элементов списка-->
           <li class="main-menu-item">
             <a class="main-menu-link main-menu-link-current">Главная</a></li>
@@ -16,7 +16,7 @@
             <a href="#" class="main-menu-link">О Седоне</a></li>
           <li class="main-menu-item">
             <a href="catalog.html" class="main-menu-link">Гостиницы</a></li>
-          </ul>
+        </ul>
         <ul class="main-menu menu-user">
           <li class="main-menu-item">
             <a href="#" class="main-menu-link search"><span class="visually-hidden">Поиск</span></a></li><!--при оформлении будет сделано значком "лупа"-->
@@ -31,23 +31,23 @@
     <main class="main-container">
       <div class="page-container">
       <section class="main-banner">
-        <h1 class="visually-hidden">Добро пожаловать в великолепную Седону</h1>
+        <h1 class="visually-hidden">Добро пожаловать в великолепную Седону.</h1>
           <img src="images/welcome-to-sedona.svg" class="main-banner-text" width="458" height="352" alt="Потому что Гранд-Каньон - отстой!"><!--картинка с текстом, другие две (фон и белый разделитель внизу) будут добавлены в ЦСС-->
           <div class="main-banner-divider"></div>
       </section>
 
       <section class="sedona-main-advantages">
-        <h2 class="main-text-description">Седона - небольшой городок в Аризоне,<br> заслуживающий большего!</h2>
-        <p class="additional-text-description">Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</p>
+        <h2 class="main-text-description sedona-title">Седона - небольшой городок в Аризоне,<br> заслуживающий большего!</h2>
+        <p class="additional-text-description sedona-reasons">Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</p>
 
-        <ol class="sedona-advantages-list"><!--При оформлении убрать вывод нумерации элементов списка(?)-->
+        <ol class="sedona-advantages-list"><!--При оформлении убрать вывод нумерации элементов списка-->
           <li class="main-sedona-advantage real-city">
             <div class="advantage-container">
               <h3 class="sedona-advantages">Настоящий<br>городок</h3>
               <p class="advantage-number">- №1 -</p>
               <p class="advantage-description">Седона - не аттракцион для<br>туристов, там течёт своя<br>жизнь</p>
             </div>
-            <img src="images/photo-real-city.jpg" width="800" height="384" alt="Город Седона" class="sedona-advantages-image"></li><!--при оформлении этот блок ли равен двум блокам ли из этого списка без картинки-->
+            <img src="images/photo-real-city.jpg" width="800" height="384" alt="Город Седона." class="sedona-advantages-image"></li><!--при оформлении этот блок ли равен двум блокам ли из этого списка без картинки-->
             <ul class="sedona-additional-advantages-list"><!--При оформлении убрать вывод значков элементов списка-->
               <li class="additional-advantage apartments">
                 <h4 class="sedona-additional-advantage">Жильё</h4><!--При оформлении перед будет добавлена декоративная картинка-->
@@ -61,7 +61,7 @@
             </ul>
           </li>
           <li class="main-sedona-advantage devil-bridge">
-            <img src="images/photo-devil-bridge.jpg" width="800" height="384" alt="Мост Дьявола" class="sedona-advantages-image"><!--при оформлении этот блок ли равен двум блокам ли из этого списка без картинки-->
+            <img src="images/photo-devil-bridge.jpg" width="800" height="384" alt="Мост Дьявола." class="sedona-advantages-image"><!--при оформлении этот блок ли равен двум блокам ли из этого списка без картинки-->
             <div class="advantage-container">
              <h3 class="sedona-advantages">Там есть<br>мост Дьявола</h3>
              <p class="advantage-number">- №2 -</p>
@@ -87,7 +87,7 @@
       </section>
 
       <section class="hotel-search">
-        <h2 class="main-text-description">Заинтересовались?</h2>
+        <h2 class="main-text-description interested">Заинтересовались?</h2>
         <p class="additional-text-description">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
         <button class="hotel-search-popup" type="button">Поиск гостиницы в Седоне</button>
       </section>
@@ -98,24 +98,24 @@
 
         <section class="subscription-with-background">
           <div class="subscription-container">
-          <h2 class="main-text-description">Подпишитесь на рассылку</h2>
+          <h2 class="main-text-description subscribe">Подпишитесь на рассылку</h2>
           <p class="additional-text-description">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
           <form class="email-form" action="https://echo.htmlacademy.ru/" method="post">
             <label class="visually-hidden">Ввод е-мэйла</label>
-            <input type="email" name="client-email" placeholder="Ваш e-mail">
+            <input type="email" name="client-email" class="email-address" placeholder="Ваш e-mail">
             <button class="button-subscription" type="submit">Подписаться</button>
           </form>
           </div>
         </section>
         <section class="our-contacts">
-          <h2 class="visually-hidden">Контакты</h2>
+          <h2 class="visually-hidden">Контакты.</h2>
           <ul class="social-media"><!--При оформлении убрать вывод значков элементов списка-->
-            <li class="social-media-vk"><a href="https://vk.com/htmlacademy"><img src="images/sm-vk.svg" width="24" height="14" alt="Вконтакте"></a></li><!--на странице будет значок ВК-->
-            <li class="social-media-telegram"><a href="https://t.me/htmlacademy"><img src="images/sm-telegram.svg" width="18" height="15" alt="Telegram"></a></li><!--на странице будет значок Телеграм-->
-            <li class="social-media-youtube"><a href="https://www.youtube.com/user/htmlacademyru"><img src="images/sm-youtube.svg" width="22" height="17" alt="Youtube"></a></li><!--на странице будет значок Ютуб-->
+            <li class="social-media-vk"><a href="https://vk.com/htmlacademy"><img src="images/sm-vk.svg" width="24" height="14" alt="Вконтакте."></a></li><!--на странице будет значок ВК-->
+            <li class="social-media-telegram"><a href="https://t.me/htmlacademy"><img src="images/sm-telegram.svg" width="18" height="15" alt="Telegram."></a></li><!--на странице будет значок Телеграм-->
+            <li class="social-media-youtube"><a href="https://www.youtube.com/user/htmlacademyru"><img src="images/sm-youtube.svg" width="22" height="17" alt="Youtube."></a></li><!--на странице будет значок Ютуб-->
           </ul>
             <a class="phone-number" href="tel:+78128121212">+7 (812) 812-12-12</a>
-            <a class="htmlacademy-logo" href="https://htmlacademy.ru"><img src="images/logo-html-academy.svg" width="115" height="33" alt="Сайт html-academy"></a><!--на странице будет лого Академии-->
+            <a class="htmlacademy-logo" href="https://htmlacademy.ru"><img src="images/logo-html-academy.svg" width="115" height="33" alt="Сайт html-academy."></a><!--на странице будет лого Академии-->
         </section>
     </footer>
   </body>
