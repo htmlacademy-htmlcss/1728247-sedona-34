@@ -538,6 +538,13 @@
     margin:16px 0;
   }
 
+  .description-container {
+    display:grid;
+    grid-template-columns: 140px 140px;
+    column-gap:20px;
+    row-gap:16px;
+  }
+
   .hotel-type, .hotel-price {
     color: #333333;
     text-align: left;
@@ -554,8 +561,10 @@
     border:none;
     text-decoration: none;
     text-align: center;
+    box-sizing: border-box;
     width:140px;
     height:37px;
+    padding-top:9px;
   }
 
   .button-favourite {
@@ -582,6 +591,8 @@
     text-align: center;
     text-transform: uppercase;
     border: none;
+    width:140px;
+    height:37px;
   }
 
   .button-rating {
@@ -595,6 +606,10 @@
     text-transform: uppercase;
     border: none;
     text-decoration: none;
+    box-sizing: border-box;
+    width:140px;
+    height:37px;
+    padding-top:9px;
   }
 
   /*pagination and cards-quantity-on-page catalog*/
