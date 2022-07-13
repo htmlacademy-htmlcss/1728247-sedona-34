@@ -16,20 +16,22 @@
 
   html {
     height: 100%;
+    background-color: #E5E5E5;
   }
 
   body {
     display: flex;
     flex-direction:column;
     min-height:100%;
+    width: 1200px;
     font-family: "PT Sans", sans-serif;
     font-size: 18px;
     line-height: 21px;
     font-weight: 400;
     color: #000000;
     background-color: #ffffff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     margin: 0 auto;
-    width: 1200px;
   }
 
   body li {
@@ -56,19 +58,35 @@
   }
 
   /*Header with navigation*/
-
   .main-navigation {
     display: flex;
     width: 1060px;
     margin: 0 auto;
     padding:0;
-    margin-bottom:-10px;
+    margin-bottom:-5px;
   }
 
   .logo-container {
     margin-right:30px;
+    line-height:0;
     z-index:1;
   }
+
+  .logo {
+    object-fit: contain;
+  }
+
+  .logo-link {
+    display:block;
+  }
+
+  /*.logo-link:hover {
+    background-color: rgba(104, 162, 202, 0.05); в стайлгайде нет состояний
+  }
+
+  .logo-link:active {
+   background-color: rgba(104, 162, 202, 0.15); в стайлгайде нет состояний
+  }*/
 
   .main-menu {
     margin:0;
@@ -76,6 +94,7 @@
     width:480px;
     display:flex;
     flex-wrap: wrap;
+    z-index:1;
   }
 
   .menu-user {
@@ -101,12 +120,97 @@
     text-decoration: none;
     display:block;
     padding: 20px 17px;
+    text-align: left;
+    position:relative;
+  }
+
+  .main-menu-link:visited {
+    color:#000000;
+  }
+
+  .main-menu-link:hover {
+    color:#756157;
+  }
+
+  .main-menu-link:focus {
+    color:#756157;
+  }
+
+  .main-menu-link:active {
+    color:rgba(117, 97, 87, 0.3);
+  }
+
+  .main-menu-link-current::before {
+    position:absolute;
+    right: 17px;
+    bottom:0;
+    left:17px;
+    height:2px;
+    background-color: #756257;
+    content:'';
   }
 
   .search, .favourite {
     min-width:42px;
     min-height:65px;
+    display:block;
     padding:0;
+    position:relative;
+  }
+
+  .search:hover {
+    fill: #756157;
+  }
+
+  .search:focus {
+    fill:#756157;
+  }
+
+  .search:active {
+    fill:rgba(117, 97, 87, 0.3);
+  }
+
+  .favourite:hover {
+    fill: #756157;
+  }
+
+  .favourite:focus {
+    fill:#756157;
+  }
+
+  .favourite:active {
+    fill:rgba(117, 97, 87, 0.3);
+  }
+
+  .navigation-item {
+    position:absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    margin:auto;
+  }
+
+ .favourite::before {
+    position:absolute;
+    width:20px;
+    height:20px;
+    background: #7DB54F;
+    border-radius: 10px;
+    content:'12';
+    color: #FFFFFF;
+    font-family: inherit;
+    font-weight:400;
+    font-size:10px;
+    line-height:13px;
+    text-align:center;
+    padding-top:2.5px;
+    box-sizing: border-box;
+    top:15px;
+    right:0;
+    bottom:31px;
+    left:24px;
+    z-index:1;
   }
 
   .button-want-here {
@@ -118,10 +222,34 @@
     line-height: 20px;
     text-transform: uppercase;
     border: none;
+    text-align: center;
+    width:160px;
+    padding-top:9px;
+    padding-bottom:8px;
+    border-radius: 4px;
+    margin-top:14px;
+    margin-left:20px;
+    cursor: pointer;
+  }
+
+  .button-want-here:hover {
+    background-color: #615048;
+  }
+
+  .button-want-here:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  .button-want-here:focus {
+    background-color: #615048;
+  }
+
+  .button-want-here:disabled {
+    background-color: #E5E5E5;
+    color: #FFFFFF;
   }
 
   /*main banner index*/
-
   .main-banner {
     background-image: url("../images/index-background.jpg");
     background-color: #82B3D3;
@@ -145,7 +273,7 @@
     margin-bottom: 25px;
   }
 
-  /*advantages index*/
+  /*advantages part index*/
   .sedona-main-advantages {
     text-align: center;
     padding-top:63px;
@@ -187,6 +315,8 @@
   .sedona-advantages-image {
     padding:0;
     margin:0;
+    max-width:100%;
+    object-fit: cover;
   }
 
   .main-text-description {
@@ -236,11 +366,6 @@
     color: #ffffff;
   }
 
-  .apartments, .souvenirs,
-   .area, .tourists {
-    background-color: rgba(131, 179, 211, 0.12);
-  }
-
   .road {
     background-color: rgba(131, 179, 211, 0.2);
   }
@@ -249,7 +374,31 @@
     margin:30px auto;
   }
 
-  /*hotel-search section index*/
+  .apartments, .souvenirs,
+   .area, .tourists {
+    background-color: rgba(131, 179, 211, 0.12);
+  }
+
+  /*иконки в дополнительных преимуществах*/
+  .apartments {
+    background-image: url('../images/advantage-accomodation.svg');
+    background-repeat: no-repeat;
+    background-position: center top 80px;
+  }
+
+  .food {
+    background-image: url('../images/advantage-food.svg');
+    background-repeat: no-repeat;
+    background-position: center top 80px;
+  }
+
+  .souvenirs {
+    background-image: url('../images/advantage-souvenirs.svg');
+    background-repeat: no-repeat;
+    background-position: center top 80px;
+  }
+
+  /*hotel-search section interested index*/
   .hotel-search {
     text-align: center;
     padding-top:91px;
@@ -270,11 +419,31 @@
     text-transform: uppercase;
     border: none;
     width:574px;
-    height:60px;
+    padding-top:12px;
+    padding-bottom:12px;
+    border-radius: 4px;
     margin-top:56px;
+    cursor: pointer;
   }
 
-  /*subscription index*/
+  .hotel-search-popup:hover {
+    background-color: #615048;
+  }
+
+  .hotel-search-popup:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  .hotel-search-popup:focus {
+    background-color: #615048;
+  }
+
+  .hotel-search-popup:disabled {
+    background-color: #E5E5E5;
+    color: #FFFFFF;
+  }
+
+  /*subscription with background for index*/
   .subscription-with-background {
     background-image: url("../images/subscription-background.jpg");
     background-repeat: no-repeat;
@@ -289,6 +458,16 @@
     color: #ffffff;
   }
 
+  /*subscription without background catalog*/
+  .subscription {
+    text-align: center;
+  }
+
+  .subscription p {
+    color: #333333;
+  }
+
+  /*subscription general part with form and button*/
   .subscription-container {
     display:flex;
     margin: 0 auto;
@@ -309,13 +488,31 @@
   .email-address {
     box-sizing:border-box;
     background-color: #F2F2F2;
+    font:inherit;
+    color: rgba(0, 0, 0, 0.6);
     width:600px;
-    height:60px;
     border:none;
     padding-top:20px;
     padding-bottom:19px;
     padding-left:22px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
     margin:0;
+  }
+
+  .email-address:hover {
+    background-color: #E6E6E6;
+  }
+
+  .email-address:focus {
+    background-color: #E6E6E6;
+    border: 3px solid #83B3D3;
+  }
+
+  .email-address:active {
+    border: 2px solid #000000;
+    background-color: #ffffff;
+    color: #000000;
   }
 
   .button-subscription {
@@ -329,20 +526,31 @@
     border: none;
     margin:0;
     width:200px;
-    height:60px;
+    padding-top:12px;
+    padding-bottom:12px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    cursor: pointer;
   }
 
-  /*subscription catalog*/
-  .subscription {
-    text-align: center;
+  .button-subscription:hover {
+    background-color: #68A2CA;
   }
 
-  .subscription p {
-    color: #333333;
+  .button-subscription:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  .button-subscription:focus {
+    background-color: #68A2CA;
+  }
+
+  .button-subscription:disabled {
+    background-color: #E5E5E5;
+    color: #FFFFFF;
   }
 
   /*footer contacts*/
-
   .our-contacts {
     text-align: center;
     display:flex;
@@ -354,6 +562,7 @@
     align-items: center;
   }
 
+  /*social-media part and conditions*/
   .social-media {
     display:flex;
     margin:0;
@@ -367,6 +576,23 @@
     width:47.33px;
   }
 
+  .icon-vk svg, .icon-telegram svg, .icon-youtube svg {
+    fill: #83B3D3;
+  }
+
+  .icon-vk:hover svg, .icon-telegram:hover svg, .icon-youtube:hover svg {
+    fill: #68A2CA;
+  }
+
+  .icon-vk:focus svg, .icon-telegram:focus svg, .icon-youtube:focus svg {
+    fill: #68A2CA;
+  }
+
+  .icon-vk:active svg, .icon-telegram:active svg, .icon-youtube:active svg {
+    fill: rgba(104, 162, 202, 0.3);
+  }
+
+  /*phone number and conditions*/
   .phone-number {
     font-weight: 400;
     color: #000000;
@@ -374,31 +600,38 @@
     line-height: 40px;
     text-decoration: none;
     text-transform: uppercase;
-    width:720px;
+  }
+
+  .phone-number:hover {
+    color: #756157;
+  }
+
+  .phone-number:focus {
+    color: #756157;
+  }
+
+  .phone-number:active {
+    color: rgba(117, 97, 87, 0.3);
+  }
+
+  /*logo html-academy and conditions*/
+  .logo-html svg {
+    fill:#000000;
+  }
+
+  .logo-html:hover svg {
+    fill: #756157;
+  }
+
+  .logo-html:focus svg {
+    fill: #756157;
+  }
+
+  .logo-html:active svg {
+    fill: rgba(117, 97, 87, 0.3);
   }
 
   /*header with filters catalog*/
-
-  .catalog-hotel-filter {
-    display:flex;
-    width:1060px;
-    margin:0 auto;
-    justify-content: space-between;
-    padding-bottom:70px;
-  }
-
-  .infrastucture, .apartment-type {
-    width:150px;
-  }
-
-  .price {
-    width:288px;
-  }
-
-  .button-container {
-    width:160.45px;
-  }
-
   .catalog-header {
     background-image: url("../images/background-filter.jpg");
     background-repeat: no-repeat;
@@ -423,19 +656,91 @@
     margin-bottom:10px;
   }
 
+  /*breadcrumbs and conditions*/
   .breadcrumbs {
     padding:0;
     margin:0;
     margin-bottom:40px;
+    margin-left:2.16px;
+    display:flex;
+  }
+
+  .breadcrumbs-main {
+    fill:#ffffff;
+  }
+
+  .breadcrumbs-main:hover {
+    fill: rgba(255, 255, 255, 0.6);
+  }
+
+  .breadcrumbs-main:focus {
+    fill: #FFFFFF;
+  }
+
+  .breadcrumbs-main:active {
+    fill: rgba(255, 255, 255, 0.3);
   }
 
   .hotels-link {
-    padding-left:40px;
+    padding-left:25.11px;
   }
 
   .breadcrumbs-link {
     color: #ffffff;
     text-decoration: none;
+    cursor: pointer;
+  }
+
+  .breadcrumbs-link:not(.bread-main) {
+    background-image: url('../images/breadcrumbs-pointer.svg');
+    background-repeat: no-repeat;
+    background-position: left 10px top 6.52px;
+  }
+
+  .breadcrumbs-link:hover {
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  .breadcrumbs-link:focus {
+    color: #FFFFFF;
+  }
+
+  .breadcrumbs-link:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  /*bid part with filters*/
+  .catalog-hotel-filter {
+    display:flex;
+    width:1060px;
+    margin:0 auto;
+    padding-bottom:70px;
+  }
+
+  .catalog-filter-group {
+    padding:0;
+    border:none;
+    margin:0;
+  }
+
+  .infrastucture, .apartment-type {
+    width:150px;
+  }
+
+  .infrastucture {
+    margin-right:70px;
+  }
+
+  .apartment-type {
+    margin-right:175.42px;
+  }
+
+  .price {
+    width:288px;
+  }
+
+  .button-container {
+    width:160.45px;
   }
 
   .catalog-filter-title {
@@ -443,56 +748,361 @@
     font-size: 20px;
     line-height: 26px;
     text-transform: capitalize;
+    text-align:left;
   }
 
+  .catalog-filter-item {
+    margin-bottom:15px;
+  }
+
+  .catalog-filter-item:last-child {
+    margin-bottom:0;
+  }
+
+  .control {
+    position:relative;
+    padding:0;
+    padding-left:40.11px;
+    margin:0;
+    display:block;
+    cursor: pointer;
+  }
+
+  /*checkboxes and conditions*/
+  .control-box {
+    position: absolute;
+    width:20px;
+    height:20px;
+    background-color: #ffffff;
+    border-radius: 4px;
+    left:0;
+    bottom:1px;
+  }
+
+  .control:hover .control-box {
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+
+  .control:focus .control-box {
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 3px solid #83B3D3;
+  }
+
+  .control:active .control-box {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+
+  .control-input:disabled + .control-box {
+    background-color: transparent;
+  }
+
+  .control-input[type="checkbox"]:checked + .control-box::before {
+    background-image: url("../images/checkbox.svg");
+    background-repeat: no-repeat;
+    background-position: left 4px top 6px;
+  }
+
+  /*.control-input[type="checkbox"]:checked + .control-box::after {
+    position:absolute;
+    width:1px;
+    height:5px;
+    background-color: #3F5E72;
+    content:"";
+    transform: rotate(-45deg);
+  }*/
+
+  /*radios and conditions*/
+  .control-radio {
+    position: absolute;
+    width:20px;
+    height:20px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    left:0;
+    bottom:1px;
+  }
+
+  .control:hover .control-radio {
+    background-color: rgba(255, 255, 255, 0.6);/*в стайлгайде нет, но так ведь лучше)*/
+  }
+
+  .control:focus .control-radio {
+    background-color: #ffffff;
+    border: 3px solid #83B3D3;
+  }
+
+  /*.control:active .control-radio {
+    background-color: rgba(255, 255, 255, 0.3); - в стайлгайде аналогично обычному состоянию
+  }*/
+
+  .control-input:disabled + .control-radio {
+    background-color: transparent;
+  }
+
+  .control-input[type="radio"]:checked + .control-radio::after {
+    position:absolute;
+    width:10px;
+    height:10px;
+    border-radius: 5px;
+    background-color: #3F5E72;
+    content:"";
+    left:5px;
+    top:5px;
+  }
+
+  /*part with price filter*/
+  .price {
+    margin-right:70px;
+  }
+
+  .catalog-filter-list {
+    padding:0;
+    margin:0;
+    border:none;
+    padding-top:30px;
+  }
+
+  .control-input {
+    margin:0;
+    margin-right:19.05px;
+  }
+
+  .price-filter::-webkit-outer-spin-button,
+   .price-filter::-webkit-inner-spin-button {
+    appearance: none;
+    margin:0;
+  }
+
+  .range-wrapper-inputs {
+    margin-top:34px;
+    display:flex;
+    width:288px;
+  }
+
+  .range-container {
+    width:144px;
+    border: 2px solid #FFFFFF;
+    position:relative;
+    box-sizing: border-box;
+  }
+
+  .price-filter {
+    width:144px;
+    background-color: transparent;
+    border:none;
+    box-sizing: border-box;
+    padding-top:14px;
+    padding-bottom:13px;
+    padding-left:19px;
+    font:inherit;
+    color:#ffffff;
+  }
+
+  .catalog-filter-label {
+    position:absolute;
+    color: rgba(255, 255, 255, 0.3);
+    font:inherit;
+    font-weight:400;
+    right:14.04px;
+    top:12px;
+  }
+
+  .container-min {
+    border-radius: 4px 0px 0px 4px;
+    border-right: 1px solid #FFFFFF;
+  }
+
+  .container-max {
+    border-radius: 0px 4px 4px 0px;
+    border-left: 1px solid #FFFFFF;
+  }
+
+  .range-container:hover {
+    border-color: rgba(255, 255, 255, 0.6);
+  }
+
+  .range-container:focus {
+    box-shadow: 0px 0px 0px 3px #81B3D2;
+  }
+
+  .range-container:active {
+    background-color: #756257;
+  }
+
+  /*stripe of price filter*/
+  .range-scale {
+    position:relative;
+    height:4px;
+    margin-bottom:8px;
+    margin-top:32px;
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+
+  .range-bar {
+    position:absolute;
+    height:4px;
+    background-color: #ffffff;
+    /*left:0;
+    right:60px; <- позиционирование указано в html*/
+  }
+
+  .range-toggle {
+    position:absolute;
+    width:20px;
+    height:20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    border:none;
+    cursor: pointer;
+  }
+
+  .range-toggle:hover {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  }
+
+  .range-toggle:focus {
+    border: 3px solid #83B3D3;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  }
+
+  .range-toggle:active {
+    border: 2px solid #83B3D3;
+    box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.4);
+  }
+
+  .toggle-min {
+    top:-8px;
+  }
+
+  .toggle-max {
+    top: -8px;
+    right: -10px;
+  }
+
+  /*buttons on the right filter part and conditions*/
   .filter-button {
     background-color: #82B3D3;
     color: #ffffff;
     font-family: "PT Sans";
     font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
     text-transform: uppercase;
     text-align: center;
     border: none;
     width:160.45px;
-    height:48px;
+    padding-top:14px;
+    padding-bottom:14px;
+    border-radius: 4px;
     margin-top:60px;
+    cursor: pointer;
+  }
+
+  .filter-button:hover {
+    background-color: #68A2CA;
+  }
+
+  .filter-button:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  .filter-button:focus {
+    background-color: #68A2CA;
+  }
+
+  .filter-button:disabled {
+    background-color: #E5E5E5;
+    color: #FFFFFF;
   }
 
   .filter-reset-button {
     background-color: transparent;
     color: #ffffff;
     font-family: "PT Sans";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
     width:160.45px;
     border: none;
     padding-top:20px;
+    cursor: pointer;
   }
 
-  /*hotel-search results catalog*/
+  .filter-reset-button:hover {
+    color: #FFFFFF;
+    opacity: 0.6;
+  }
+
+  .filter-reset-button:focus {
+    border: 3px solid #83B3D3;
+    border-radius: 4px;
+  }
+
+  .filter-reset-button:active {
+    color: #FFFFFF;
+    opacity: 0.3;
+  }
+
+  /*hotel-search results part catalog*/
   .hotel-search-title-container {
     display:flex;
     width:1060px;
     margin:0 auto;
     justify-content:space-between;
     padding-top:50px;
+    margin-bottom:60.6px;
   }
 
+  .hotels-found {
+    padding-top:7.46px;
+    padding-bottom:4.6px;
+  }
+
+  /*sorting cards on page by price*/
   .select-control {
     font-family: "PT Sans";
     font-size: 18px;
     line-height: 21px;
     color: #333333;
     width:290px;
+    min-height:49px;
     margin-right:78px;
     margin-left:190px;
+    border: 2px solid #E5E5E5;
+    border-radius: 4px;
     padding-top:10px;
     padding-bottom:10px;
     padding-left:20px;
+    appearance: none;
+    background-image: url('../images/sorting-pointer.svg');
+    background-repeat:no-repeat;
+    background-position: right 20.99px center;
+    cursor: pointer;
   }
 
+  .select-control:hover {
+    border: 2px solid #68A2CA;
+  }
+
+  .select-control:focus {
+    border: 2px solid #68A2CA;
+  }
+
+  .select-control:active {
+    border: 2px solid #3F5E72;
+  }
+
+  .select-control:disabled {
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    color: rgba(0, 0, 0, 0.3);
+  }
+
+  /*sorting cards on page by view*/
   .view-on-page {
-    display:flex;
+    display:grid;
     width:160px;
-    justify-content: space-between;
+    grid-template-columns: repeat(3, 48px);
+    column-gap: 8px;
     margin:0;
     padding:0;
   }
@@ -501,27 +1111,51 @@
     display:block;
     width:48px;
     height:48px;
+    box-sizing: border-box;
+    padding: 12px 14px;
+    border: 2px solid #E5E5E5;
+    border-radius: 4px;
   }
 
+  .button-view-on-page:hover {
+    border: 2px solid #000000;
+  }
+
+  .button-view-on-page:focus {
+    border: 2px solid #68A2CA;
+  }
+
+  .button-view-on-page:active {
+    border: 2px solid #000000;
+  }
+
+  .button-view-on-page-active {
+    border: 2px solid #000000;
+  }
+
+  /*part with hotel cards*/
   .hotel-list {
-    display:flex;
     margin:0 auto;
     padding:0;
     width:1056px;
-    flex-wrap:wrap;
-    justify-content: space-between;
+    display:grid;
+    grid-template-columns: repeat(3, 340px);
+    column-gap: 18px;
     padding-bottom:66px;
+    border-bottom: 1px solid #E6E6E6;
   }
 
+  /*hotel card design*/
   .hotel-card {
     width:300px;
     padding:20px;
-    }
+  }
 
   .hotel-card-image {
     max-width:100%;
     height:auto;
     margin:0;
+    object-fit: contain;
   }
 
   .hotel-card-link {
@@ -530,6 +1164,18 @@
     text-decoration: none;
     display:block;
   }
+
+  .hotel-card-link:hover {
+   background-color: #F2F2F2;
+   border-bottom-left-radius: 4px;
+   border-bottom-right-radius: 4px;
+  }
+
+  .hotel-card-link:active {
+    background-color: #E5E5E5;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+   }
 
   .hotel-card-title {
     font-weight: 700;
@@ -541,7 +1187,7 @@
 
   .description-container {
     display:grid;
-    grid-template-columns: 140px 140px;
+    grid-template-columns: repeat(2, 140px);
     column-gap:20px;
     row-gap:16px;
   }
@@ -551,6 +1197,7 @@
     text-align: left;
   }
 
+  /*buttons on hotel card and their conditions*/
   .button-details {
     background-color: #756157;
     font-family: "PT Sans";
@@ -564,8 +1211,26 @@
     text-align: center;
     box-sizing: border-box;
     width:140px;
-    height:37px;
+    border-radius: 4px;
     padding-top:9px;
+    padding-bottom:8px;
+  }
+
+  .button-details:hover {
+    background-color: #615048;
+  }
+
+  .button-details:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  .button-details:focus {
+    background-color: #615048;
+  }
+
+  .button-details:disabled {
+    background-color: #E5E5E5;
+    color: #FFFFFF;
   }
 
   .button-favourite {
@@ -579,7 +1244,27 @@
     text-transform: uppercase;
     border: none;
     width:140px;
-    height:37px;
+    border-radius: 4px;
+    padding-top:9px;
+    padding-bottom:8px;
+    cursor: pointer;
+  }
+
+  .button-favourite:hover {
+    background-color: #68A2CA;
+  }
+
+  .button-favourite:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  .button-favourite:focus {
+    background-color: #68A2CA;
+  }
+
+  .button-favourite:disabled {
+    background-color: #E5E5E5;
+    color: #FFFFFF;
   }
 
   .button-favourite-active {
@@ -593,13 +1278,32 @@
     text-transform: uppercase;
     border: none;
     width:140px;
-    height:37px;
+    border-radius: 4px;
+    padding-top:9px;
+    padding-bottom:8px;
+  }
+
+  .button-favourite-active:hover {
+    background-color: #6C9E42;
+  }
+
+  .button-favourite-active:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  .button-favourite-active:focus {
+    background-color: #6C9E42;
+  }
+
+  .button-favourite-active:disabled {
+    background-color: #E5E5E5;
+    color: #FFFFFF;
   }
 
   .button-rating {
     background-color: #F2F2F2;
     font-family: "PT Sans";
-    font-weight: 700;
+    font-weight: 400;
     color: #333333;
     font-size: 16px;
     line-height: 20px;
@@ -609,11 +1313,31 @@
     text-decoration: none;
     box-sizing: border-box;
     width:140px;
-    height:37px;
+    border-radius: 4px;
     padding-top:9px;
+    padding-bottom:8px;
+    cursor: pointer;
   }
 
-  /*pagination and cards-quantity-on-page catalog*/
+  .button-rating:hover {
+    background-color: #E6E6E6;
+  }
+
+  .button-rating:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  .button-rating:focus {
+    background-color: #E6E6E6;
+    border: 3px solid #83B3D3;
+  }
+
+  .button-rating:disabled {
+    background-color: #E5E5E5;
+    color: #FFFFFF;
+  }
+
+  /*pagination and quantity-sorting catalog*/
   .pagination-quantity-container {
     display:flex;
     width:1060px;
@@ -621,8 +1345,10 @@
     justify-content:space-between;
     align-items: center;
     margin-top:30px;
+    margin-bottom:25px;
   }
 
+  /*pagination design and conditions*/
   .pagination {
     display:flex;
     width:400px;
@@ -630,11 +1356,6 @@
     align-items: center;
     margin:0;
     padding:0;
-  }
-
-  .quantity-container {
-    max-width:400px;
-    justify-content: space-between;
   }
 
   .pagination-link {
@@ -650,13 +1371,47 @@
     display:block;
     box-sizing:border-box;
     width:60px;
-    height: 60px;
+    border-radius: 4px;
     padding-top:11.36px;
+    padding-bottom:12.64px;
+  }
+
+  .pagination-link:hover {
+    background-color: #68A2CA;
+  }
+
+  .pagination-link:focus {
+    background-color: #68A2CA;
+  }
+
+  .pagination-link:active {
+    color: rgba(255, 255, 255, 0.3);
   }
 
   .pagination-current {
     background-color: #F2F2F2;
     color: #000000;
+  }
+
+  .pagination-current:hover {
+    background-color: #F2F2F2;
+    color: #000000;
+  }
+
+  .pagination-current:focus {
+    background-color: #F2F2F2;
+    color: #000000;
+  }
+
+  .pagination-current:active {
+    background-color: #F2F2F2;
+    color: #000000;
+  }
+
+  /*quantity-sorting and conditions*/
+  .quantity-container {
+    max-width:400px;
+    justify-content: space-between;
   }
 
   .hotels-on-page {
@@ -670,4 +1425,32 @@
     line-height: 21px;
     color: #333333;
     width:160px;
+    border: 2px solid #E5E5E5;
+    border-radius: 4px;
+    margin-left:51px;
+    padding-top:14px;
+    padding-bottom:14px;
+    padding-left:20px;
+    appearance: none;
+    background-image: url('../images/sorting-pointer.svg');
+    background-repeat:no-repeat;
+    background-position: right 20.99px center;
+    cursor: pointer;
+  }
+
+  .quantity-control:hover {
+    border: 2px solid #68A2CA;
+  }
+
+  .quantity-control:focus {
+    border: 2px solid #68A2CA;
+  }
+
+  .quantity-control:active {
+    border: 2px solid #3F5E72;
+  }
+
+  .quantity-control:disabled {
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    color: rgba(0, 0, 0, 0.3);
   }
